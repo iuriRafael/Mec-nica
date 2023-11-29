@@ -14,4 +14,3 @@ class Adm < ActiveRecord::Base
       nil
     end
   end
-  

@@ -14,7 +14,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/login' do
-    @login_message = session.delete(:login_message) # Pegar mensagem da sessão e limpar
     erb :'login' # Renderiza o arquivo login.erb localizado em app/views
   end
 
