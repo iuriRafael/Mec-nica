@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Attendance Dashboard | By Code Info</title>
   <link rel="stylesheet" href="/stylesheets/home.css" />
-  <!-- Font Awesome Cdn Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
@@ -20,7 +19,7 @@
           <i class="fas fa-menorah"></i>
           <span class="nav-item">Ordem de Serviço</span>
         </a></li>
-        <li><a href="#">
+        <li><a href="/home">
           <i class="fas fa-comment"></i>
           <span class="nav-item">Seviço</span>
         </a></li>
@@ -58,69 +57,40 @@
 
     <section class="main">
       <div class="main-top">
-        <h1>SERVIÇO</h1>
+        <h1>Clientes</h1>
         
       </div>
 
       <section class="attendance">
         <div class="attendance-list">
         <div class="Menu">
-            <h1>SERVIÇO</h1>
-            <i class="fas fa-user-cog"></i>
+            <h1>Clientes</h1>
+            <a href="/cadastro_cliente">
+              <i class="fas fa-user-cog"></i>
+            </a>
         </div>
           <table class="table">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Descrição</th>
-                <th>Placa</th>
-                <th>Codigo</th>
+                <th>Nome</th>
+                <th>Numero</th>
+                <th>Email</th>
+                <th>Enderenco</th>
+                <th>CFP</th>
                 
               </tr>
             </thead>
+            <% clientes.each do |cliente| %>
             <tbody>
               <tr>
-                <td>Iuri</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>122344</td>
+              <td><%= cliente.Nome %></td>
+              <td><%= cliente.Numero %></td>
+              <td><%= cliente.Email %></td>
+              <td><%= cliente.Endereco %></td>
+              <td><%= cliente.CPF %></td
                 
               </tr>
-              <tr>
-                <td>Valentina</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>12344</td>
-                
-              </tr>
-              <tr>
-                <td>Kannemann</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>12344</td>
-                
-              </tr>
-              <tr>
-                <td>Geromel</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>r56yyg</td>
-                
-              </tr>
-              <!-- <tr >
-                <td>Gremio</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>3456hg</td>
-                
-              </tr>
-              <tr >
-                <td>Tara Smith</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>123dff</td>
-                
-              </tr> -->
+            <% end %>
             </tbody>
           </table>
         </div>

@@ -2,7 +2,7 @@
 
 require './config/environment'
 require 'sinatra'
-require_relative '../models/ordem_servico.rb'
+
 
 class OrdemServicoController < Sinatra::Base
 

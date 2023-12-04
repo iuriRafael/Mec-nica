@@ -10,7 +10,8 @@ class FuncionariosController < Sinatra::Base
   end
 
   get '/funcionarios' do
-    erb :'funcionarios'
+    @funcionarios = Funcionario.all 
+    erb :'funcionarios', locals: { funcionarios: @funcionarios }
   end
 
   get '/cadastro_funcionario' do
