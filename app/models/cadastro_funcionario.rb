@@ -9,3 +9,8 @@ class Funcionario < ActiveRecord::Base
   
     
 end
+
+class Equipes < ActiveRecord::Base
+    validates :Nome, presence: true, uniqueness: true
+    belongs_to :funcionario, foreign_key: 'ID_Funcionario'
+  end

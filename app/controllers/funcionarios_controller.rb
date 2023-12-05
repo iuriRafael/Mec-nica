@@ -2,6 +2,7 @@ require './config/environment'
 require 'sinatra'
 require_relative '../models/cadastro_funcionario.rb'
 
+
 class FuncionariosController < Sinatra::Base
 
   configure do
@@ -26,5 +27,26 @@ class FuncionariosController < Sinatra::Base
 
     redirect '/funcionarios'
   end
+
+  get '/equipe' do
+    @equipes = Equipes.all
+  erb :'equipe', locals: { equipes: @equipes }
+end
+
+get '/cadastro_equipe' do
+  @funcionarios = Funcionario.all
+  erb :'cadastro_equipe', locals: { funcionarios: @funcionarios }
+  end
+
+  post '/cadastro_equipe' do
+    nome = params['Nome']
+    funcionario_id = params['FuncionarioId']
+    Equipes.create(Nome: nome, ID_Funcionario: funcionario_id)
+
+    redirect '/equipe'
+  end
+
+  
+
 
 end
