@@ -5,6 +5,7 @@ class Ordem_Servico < ActiveRecord::Base
   
     validates :Data_Inicio, presence: true
     validates :Data_Final, presence: true
+    validates :Valor, presence: true
   
     belongs_to :veiculo, class_name: 'Veiculos', foreign_key: 'Id_Veiculo'
     belongs_to :peca, class_name: 'Peca', foreign_key: 'Id_peca'

@@ -76,7 +76,8 @@
               <th>Placa Veículo</th>
               <th>Peça</th>
               <th>Cliente</th>
-              <th> Equipe</th>
+              <th>Equipe</th>
+              <th>Valor</th>
               <th>Status</th>
                 
               </tr>
@@ -91,6 +92,7 @@
                 <td><%= ordem_Servico.peca.Nome%></td>
                 <td><%= ordem_Servico.cliente.Nome %></td>
                 <td><%= ordem_Servico.equipe.Nome %></td>
+                <td>R$<%= format('%.2f', ordem_Servico.Valor) %></td>
 
                 <td>
                   <form action="/ordem_servico/concluir" method="post">

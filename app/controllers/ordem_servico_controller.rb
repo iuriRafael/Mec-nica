@@ -36,8 +36,9 @@ class OrdemServicoController < Sinatra::Base
     peca_id = params['Id_peca']
     cliente_id = params['Id_Cliente']
     equipe_id = params['Id_equipe']
+    valor = params['Valor']
 
-    Ordem_Servico.create(Data_Inicio: data_inicio, Data_Final: data_final, Id_Veiculo: veiculo_id, Id_peca: peca_id, Id_Cliente: cliente_id, Id_equipe: equipe_id)
+    Ordem_Servico.create(Data_Inicio: data_inicio, Data_Final: data_final, Id_Veiculo: veiculo_id, Id_peca: peca_id, Id_Cliente: cliente_id, Id_equipe: equipe_id, Valor: valor)
 
     redirect '/home'
   end
