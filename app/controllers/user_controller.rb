@@ -33,8 +33,6 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  get '/home' do
-    erb :'home'
-  end
+ 
 
 end

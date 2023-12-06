@@ -6,6 +6,7 @@
   <title>Ordem de Serviço</title>
   <link rel="stylesheet" href="/stylesheets/ordem_servico.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
 </head>
 <body>
 <div class="container">
@@ -64,30 +65,44 @@
         <h1>SERVIÇO</h1>
       </div>
 
-      <form id="serviceForm">
-        <label for="emissionDate">Data de Emissão:</label>
-        <input type="date" id="emissionDate" name="emissionDate"><br><br>
-  
-        <label for="completionDate">Data de Conclusão:</label>
-        <input type="date" id="completionDate" name="completionDate"><br><br>
-  
-        <label for="services">Equipes</label>
-        <select id="services" name="services">
-          <option value="service1">Serviço 1</option>
-          <option value="service2">Serviço 2</option>
-          <option value="service3">Serviço 3</option>
-        </select><br><br>
-  
-        <label for="carPlate">Placa do Carro:</label>
-          <input type="text" id="carPlate" name="carPlate"><br><br>
-  
-          <label for="totalValue">Nome Cliente</label>
-          <input type="text" id="totalValue" name="Placa"><br><br>
+      <form action="/ordem_servico" method="post">
+        <label for="Data_Inicio">Data de Início:</label>
+        <input type="date" id="Data_Inicio" name="Data_Inicio" required><br><br>
+      
+        <label for="Data_Final">Data de Conclusão:</label>
+        <input type="date" id="Data_Final" name="Data_Final" required><br><br>
+      
+        <label for="Id_Veiculo">Placa do Veículo:</label>
+          <select id="Id_Veiculo" name="Id_Veiculo" required>
+            <% veiculos.each do |veiculo| %>
+          <option value="<%= veiculo.id %>"><%= veiculo.Placa %></option>
+        <% end %>
+      </select><br><br>
 
-          <label for="totalValue">Peça</label>
-          <input type="text" id="totalValue" name="Peça"><br><br>
-  
-          <input type="submit" value="Submit">
+      
+      <label for="Id_peca">Peça:</label>
+      <select id="Id_peca" name="Id_peca" required>
+        <% pecas.each do |peca| %>
+          <option value="<%= peca.id %>"><%= peca.Nome %></option>
+        <% end %>
+      </select><br><br>
+
+      <label for="Id_Cliente">Cliente:</label>
+      <select id="Id_Cliente" name="Id_Cliente" required>
+        <% clientes.each do |cliente| %>
+          <option value="<%= cliente.id %>"><%= cliente.Nome %></option>
+        <% end %>
+      </select><br><br>
+      
+      <label for="Id_equipe">Equipe:</label>
+      <select id="Id_equipe" name="Id_equipe" required>
+        <% equipes.each do |equipe| %>
+          <option value="<%= equipe.id %>"><%= equipe.Nome %></option>
+        <% end %>
+      </select><br><br>
+      
+      <input type="submit" value="Cadastrar">
+       
       </form>
 
   </section>

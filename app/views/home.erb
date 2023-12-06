@@ -20,7 +20,7 @@
           <i class="fas fa-menorah"></i>
           <span class="nav-item">Ordem de Serviço</span>
         </a></li>
-        <li><a href="#">
+        <li><a href="/home">
           <i class="fas fa-comment"></i>
           <span class="nav-item">Seviço</span>
         </a></li>
@@ -71,56 +71,30 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Descrição</th>
-                <th>Placa</th>
-                <th>Codigo</th>
+                
+              <th>Data Início</th>
+              <th>Data Final</th>
+              <th>Placa Veículo</th>
+              <th>Peça</th>
+              <th>Cliente</th>
+              <th> Equipe</th>
                 
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Iuri</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>122344</td>
-                
-              </tr>
-              <tr>
-                <td>Valentina</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>12344</td>
-                
-              </tr>
-              <tr>
-                <td>Kannemann</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>12344</td>
-                
-              </tr>
-              <tr>
-                <td>Geromel</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>r56yyg</td>
-                
-              </tr>
-              <!-- <tr >
-                <td>Gremio</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>3456hg</td>
-                
-              </tr>
-              <tr >
-                <td>Tara Smith</td>
-                <td>Pedente</td>
-                <td>qweb-3422</td>
-                <td>123dff</td>
-                
-              </tr> -->
+              <% ordem_servico.each do |ordem_Servico| %>
+                <tr>
+                  
+                <td><%= ordem_Servico.Data_Inicio %></td>
+                <td><%= ordem_Servico.Data_Final %></td>
+                <td><%= ordem_Servico.veiculo.Placa %></td>
+                <td><%= ordem_Servico.peca.Nome%></td>
+                <td><%= ordem_Servico.cliente.Nome %></td>
+                <td><%= ordem_Servico.equipe.Nome %></td>
+                  
+                </tr>
+              <% end %>
+  
             </tbody>
           </table>
         </div>

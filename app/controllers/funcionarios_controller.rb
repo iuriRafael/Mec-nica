@@ -46,7 +46,4 @@ get '/cadastro_equipe' do
     redirect '/equipe'
   end
 
-  
-
-
 end
