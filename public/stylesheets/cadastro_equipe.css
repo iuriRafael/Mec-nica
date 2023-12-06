@@ -1,4 +1,3 @@
-/* Reset de estilos padrão */
 *{
     margin: 0;
     padding: 0;
@@ -81,32 +80,126 @@
   .container{
     display: flex;
   }
-  
+
+  *{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: rgb(226, 226, 226);
+}
+nav{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  /* width: 280px; */
+  background: #fff;
+  overflow: hidden;
+  transition: 1s;
+}
+nav:hover{
+  width: 280px;
+  transition: 1s;
+}
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+  display: table;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  background: #eee;
+}
+a:hover i{
+  color: #34AF6D;
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+.container{
+  display: flex;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
   .attendance {
-    background: #fff;
+    width: 300px;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  }
+  
+  .attendance h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .attendance form {
     display: flex;
+    flex-direction: column;
+  }
+
+  .attendance input,
+  .attendance select {
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    height: 30px;
+    margin-top: 10px;
   }
   
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  input[type="submit"] {
-    padding: 10px 20px;
+  .attendance input[type="submit"] {
+    padding: 10px;
     border: none;
     border-radius: 4px;
     background-color: #007bff;
@@ -114,7 +207,6 @@
     cursor: pointer;
   }
   
-  input[type="submit"]:hover {
+  .attendance input[type="submit"]:hover {
     background-color: #0056b3;
   }
-  

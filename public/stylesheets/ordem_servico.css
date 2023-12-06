@@ -1,5 +1,3 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 *{
   margin: 0;
   padding: 0;
@@ -83,98 +81,119 @@ a:hover i{
   display: flex;
 }
 
-/* MAin Section */
-.main{
-  position: relative;
+*{
+margin: 0;
+padding: 0;
+outline: none;
+border: none;
+text-decoration: none;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+body{
+background: rgb(226, 226, 226);
+}
+nav{
+position: sticky;
+top: 0;
+bottom: 0;
+height: 100vh;
+left: 0;
+width: 90px;
+/* width: 280px; */
+background: #fff;
+overflow: hidden;
+transition: 1s;
+}
+nav:hover{
+width: 280px;
+transition: 1s;
+}
+.logo{
+text-align: center;
+display: flex;
+margin: 10px 0 0 10px;
+padding-bottom: 3rem;
+}
+
+.logo img{
+width: 45px;
+height: 45px;
+border-radius: 50%;
+}
+.logo span{
+font-weight: bold;
+padding-left: 15px;
+font-size: 18px;
+text-transform: uppercase;
+}
+a{
+position: relative;
+width: 280px;
+font-size: 14px;
+color: rgb(85, 83, 83);
+display: table;
+padding: 10px;
+}
+nav .fas{
+position: relative;
+width: 70px;
+height: 40px;
+top: 20px;
+font-size: 20px;
+text-align: center;
+}
+.nav-item{
+position: relative;
+top: 12px;
+margin-left: 10px;
+}
+a:hover{
+background: #eee;
+}
+a:hover i{
+color: #34AF6D;
+transition: 0.5s;
+}
+.logout{
+position: absolute;
+bottom: 0;
+}
+
+.container{
+display: flex;
+}
+
+
+form {
+  max-width: 400px;
+  margin: 50px auto;
   padding: 20px;
-  width: 100%;
-  margin-top: 6%;
-}
-.main-top{
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Alinha os itens verticalmente */
 }
-.main-top i{
-  position: absolute;
-  right: 0;
-  margin: 10px 30px;
-  color: rgb(110, 109, 109);
+
+label,
+select,
+input[type="date"],
+input[type="submit"] {
+  margin: 10px 0; /* Espaçamento entre os elementos */
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  align-self: flex-start; /* Alinha o botão à esquerda */
   cursor: pointer;
-}
-.main .users{
-  display: flex;
-  width: 100%;
-}
-
-.fas.fa-user-cog {
-    font-size: 2em; /* Ajuste este valor para o tamanho desejado */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
 }
 
-.Menu{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+input[type="submit"]:hover {
+  background-color: #0056b3;
 }
-
-/* Estilos para o formulário */
-#serviceForm {
-    margin-top: 30px;
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  #serviceForm label {
-    font-weight: bold;
-    width: 48%; /* Define a largura para os labels ocuparem metade do espaço */
-    margin-bottom: 6px;
-    box-sizing: border-box;
-  }
-  
-  #serviceForm input[type="date"],
-  #serviceForm input[type="text"],
-  #serviceForm select {
-    width: 48%; /* Define a largura para os inputs ocuparem metade do espaço */
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  #serviceForm input[type="submit"] {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #34AF6D;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #serviceForm input[type="submit"]:hover {
-    background-color: #269d58;
-  }
-
-  
-  
-  /* Media Query para telas menores */
-  @media screen and (max-width: 768px) {
-    #serviceForm label,
-    #serviceForm input[type="date"],
-    #serviceForm input[type="text"],
-    #serviceForm select {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-  

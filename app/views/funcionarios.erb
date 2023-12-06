@@ -87,11 +87,6 @@
                 <td><%= funcionario.Nome %></td>
                 <td><%= funcionario.Enderenco %></td>
                 <td><%= funcionario.Especialidade %></td>
-                <td>
-                  <form action="/funcionarios/<%= funcionario.id %>/excluir" method="post" onsubmit="return confirm('Tem certeza que deseja excluir este funcionário?')">
-                    <button type="submit">Excluir</button>
-                  </form>
-                </td>
               </tr>
             <% end %>
              <tr>
