@@ -31,4 +31,19 @@ class PecaController < Sinatra::Base
     redirect '/pecas'
   end
 
+  post '/pecas/:id/excluir' do
+    peca = Peca.find_by(id: params['id'])
+  
+    if peca
+  
+      ordens_relacionadas = Ordem_Servico.where(Id_Peca: peca.id)
+      
+      if ordens_relacionadas.empty?
+        peca.destroy
+      end
+    end
+    
+    redirect '/pecas'
+  end
+
 end    

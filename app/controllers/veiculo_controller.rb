@@ -31,4 +31,17 @@ class VeiculoController < Sinatra::Base
 
     end
 
+    post '/veiculos/:id/excluir' do
+      veiculo = Veiculos.find_by(id: params['id'])
+      
+      if veiculo
+        ordens_relacionadas = Ordem_Servico.where(Id_Veiculo: veiculo.id)
+      
+        if ordens_relacionadas.empty?
+          veiculo.destroy
+        end
+      end
+    
+      redirect '/veiculos'
+    end
 end

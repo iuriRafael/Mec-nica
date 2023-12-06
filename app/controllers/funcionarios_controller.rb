@@ -46,4 +46,33 @@ get '/cadastro_equipe' do
     redirect '/equipe'
   end
 
+  post '/funcionarios/:id/excluir' do
+    funcionario = Funcionario.find_by(id: params['id'])
+  
+    if funcionario
+      equipes_relacionadas = Equipes.exists?(ID_Funcionario: funcionario.ID_Funcionario)
+  
+      if equipes_relacionadas.empty?
+        funcionario.destroy
+        redirect '/funcionarios'
+      end
+    end
+    redirect '/funcionarios'
+  end
+
+  post '/equipe/:id/excluir' do
+    equipe = Equipes.find_by(id: params['id'])
+  
+    if equipe
+    
+      funcionarios_relacionados = Ordem_Servico.where(ID_Equipe: equipe.id)
+  
+      if funcionarios_relacionados.empty?
+        equipe.destroy
+      end
+    end
+  
+    redirect '/equipe'
+  end
+  
 end

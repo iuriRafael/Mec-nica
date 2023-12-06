@@ -12,15 +12,15 @@
     <nav>
       <ul>
         <li><a href="#" class="logo">
-          <img src="./pic/logo.jpg">
+          
           <span class="nav-item">Admin</span>
         </a></li>
         <li><a href="/ordem_servico">
-          <i class="fas fa-menorah"></i>
+        <i class="fas fa-tasks"></i>
           <span class="nav-item">Ordem de Serviço</span>
         </a></li>
         <li><a href="/home">
-          <i class="fas fa-comment"></i>
+        <i class="fas fa-tools"></i>
           <span class="nav-item">Seviço</span>
         </a></li>
         <li><a href="/funcionarios">
@@ -28,21 +28,21 @@
           <span class="nav-item">Funcionario</span>
         </a></li>
         <li><a href="/clientes">
-          <i class="fas fa-chart-bar"></i>
+        <i class="fas fa-address-card"></i>
           <span class="nav-item">Clientes</span>
         </a></li>
         <li><a href="/pecas">
-          <i class="fas fa-cog"></i>
+        <i class="fas fa-wrench"></i>
           <span class="nav-item">Peças</span>
         </a></li>
 
         <li><a href="/veiculos">
-          <i class="fas fa-cog"></i>
+        <i class="fas fa-car"></i>
           <span class="nav-item">Veiculos</span>
         </a></li>
 
         <li><a href="/equipe">
-          <i class="fas fa-cog"></i>
+        <i class="fas fa-users"></i>
           <span class="nav-item">Equipes</span>
         </a></li>
 
@@ -76,6 +76,7 @@
                 <th>Nome</th>
                 <th >Enderenço</th>
                 <th>Especializade</th>
+                <th>Excluir</th>
                 
                 
               </tr>
@@ -86,6 +87,11 @@
                 <td><%= funcionario.Nome %></td>
                 <td><%= funcionario.Enderenco %></td>
                 <td><%= funcionario.Especialidade %></td>
+                <td>
+                  <form action="/funcionarios/<%= funcionario.id %>/excluir" method="post" onsubmit="return confirm('Tem certeza que deseja excluir este funcionário?')">
+                    <button type="submit">Excluir</button>
+                  </form>
+                </td>
               </tr>
             <% end %>
              <tr>

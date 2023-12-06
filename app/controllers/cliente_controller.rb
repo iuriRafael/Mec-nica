@@ -30,4 +30,19 @@ class ClienteController < Sinatra::Base
         redirect '/clientes'
         
     end
+
+    post '/clientes/:id/excluir' do
+        cliente = Cliente.find_by(id: params['id'])
+      
+        if cliente
+          ordens_relacionadas = Ordem_Servico.where(Id_Cliente: cliente.id)
+      
+          if ordens_relacionadas.empty?
+            cliente.destroy
+          end
+        end
+      
+        redirect '/clientes'
+      end
+      
 end
