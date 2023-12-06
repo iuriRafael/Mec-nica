@@ -91,6 +91,13 @@
                 <td><%= ordem_Servico.peca.Nome%></td>
                 <td><%= ordem_Servico.cliente.Nome %></td>
                 <td><%= ordem_Servico.equipe.Nome %></td>
+
+                <td>
+                  <form action="/ordem_servico/concluir" method="post">
+                    <input type="hidden" name="id" value="<%= ordem_Servico.id %>">
+                    <button type="submit">Concluir</button>
+                  </form>
+                </td>
                   
                 </tr>
               <% end %>

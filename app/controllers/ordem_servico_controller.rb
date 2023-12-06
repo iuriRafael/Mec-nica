@@ -42,5 +42,12 @@ class OrdemServicoController < Sinatra::Base
     redirect '/home'
   end
 
+  post '/ordem_servico/concluir' do
+    id = params['id']
+    ordem_Servico = Ordem_Servico.find(id)
+    ordem_Servico.destroy
+    redirect '/home'
+  end
+
 
 end
