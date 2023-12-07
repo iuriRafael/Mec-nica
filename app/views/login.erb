@@ -3,6 +3,8 @@
 <html>
 <head>
   <title>Tela de Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,14 +15,25 @@
       align-items: center;
       height: 100vh;
       background-color: #f4f4f4;
+      background-image: url('https://ptipr.edu/wp-content/uploads/2019/06/profesiona-technical-institute-mecanica-automotriz.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat;
+      background-position: center; 
     }
 
     .login-container {
-      background-color: #fff;
+      
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: center;
+      width: 400px; 
+      height: 400px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
     }
 
     .login-container h2 {
@@ -29,12 +42,14 @@
 
     .input-group {
       margin-bottom: 15px;
+      height:30%;
     }
 
     .input-group label {
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
+      font-size: 18px;
     }
 
     .input-group input {
@@ -42,10 +57,12 @@
       padding: 8px;
       border-radius: 3px;
       border: 1px solid #ccc;
+      font-size: 16px;
     }
 
     .input-group button {
-      width: 100%;
+      width: 70%;
+      height: 80%;
       padding: 8px;
       border-radius: 3px;
       border: none;
@@ -53,16 +70,26 @@
       color: #fff;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      font-size: 16px;
     }
 
     .input-group button:hover {
       background-color: #0056b3;
     }
+
+    label{
+      color: #fff;
+    }
+
+    h2{
+      color: #fff;
+      
+    }
   </style>
 </head>
 <body>
   <div class="login-container">
-    <h2>Login</h2>
+    <h2>Adminstrador</h2>
     <form action="/login" method="post">
       <div class="input-group">
         <label for="username">Usuário:</label>
