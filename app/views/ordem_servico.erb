@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
   <style>
+
+  .main{
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center;
+  }
   form {
   width: 70vw;
   margin: 50px auto;
@@ -95,9 +102,6 @@ input[type="submit"]:hover {
   </nav>
 
   <section class="main">
-      <div class="main-top">
-        <h1>SERVIÇO</h1>
-      </div>
 
       <form action="/ordem_servico" method="post">
         <label for="Data_Inicio">Data de Início:</label>

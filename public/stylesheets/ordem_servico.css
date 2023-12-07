@@ -164,6 +164,9 @@ bottom: 0;
 display: flex;
 }
 
+main{
+width: 100%;
+}
 
 form {
   width: 70vw;
