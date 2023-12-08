@@ -10,6 +10,8 @@ class VeiculoController < Sinatra::Base
         set :views, 'app/views'
       end
 
+      #iuri
+
     get '/veiculos' do
       @veiculos = Veiculos.all
         erb :'veiculo', locals: { veiculos: @veiculos }
