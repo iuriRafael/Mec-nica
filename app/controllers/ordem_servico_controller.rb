@@ -24,6 +24,8 @@ class OrdemServicoController < Sinatra::Base
     @pecas = Peca.all
     @clientes = Cliente.all
     @equipes = Equipes.all
+
+    #iuri
   
     erb :'ordem_servico', locals: { veiculos: @veiculos, pecas: @pecas, clientes: @clientes, equipes: @equipes }
   end
