@@ -1,6 +1,0 @@
-services:
-  - name: mecanicasimas
-    
-    buildCommand: docker build -t mecanicasimas .
-    startCommand: docker run -p 4567:4567 mecanicasimas
-    httpPort: 4567

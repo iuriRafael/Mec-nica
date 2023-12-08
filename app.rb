@@ -12,6 +12,7 @@ require_relative 'app/controllers/peca_controller'
 require_relative 'app/controllers/veiculo_controller'
 require_relative 'app/controllers/ordem_servico_controller'
 
+
 set :views, "#{settings.root}/app/views"
 
 use ApplicationController
