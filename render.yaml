@@ -1,0 +1,7 @@
+services:
+  - name: web
+    env: ruby
+    buildCommand: bundle install
+    startCommand: bundle exec ruby app.rb -p $PORT
+    healthCheckPath: /
+    httpPort: 8080
