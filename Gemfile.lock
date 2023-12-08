@@ -53,6 +53,8 @@ GEM
     mysql2 (0.5.5)
     nokogiri (1.15.5-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.15.5-x86_64-linux)
+      racc (~> 1.4)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -116,6 +118,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   activerecord (~> 5.0, >= 4.2.6)
